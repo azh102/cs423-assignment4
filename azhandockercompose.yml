@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  control:
+    image: ubuntu
+    hostname: control
+    command: sleep infinity
+    ports:
+      - "8585:85"
+    networks:
+      - cs423-assignment4
+
+  node1:
+    image: ubuntu
+    hostname: node1
+    command: sleep infinity
+    ports:
+      - "8181:81"
+    networks:
+      - cs423-assignment4
+
+  node2:
+    image: ubuntu
+    hostname: node2
+    command: sleep infinity
+    ports:
+      - "8282:82"
+    networks:
+      - cs423-assignment4
+
+  node3:
+    image: ubuntu
+    hostname: node3
+    command: sleep infinity
+    ports:
+      - "8383:83"
+    networks:
+      - cs423-assignment4
+
+  node4:
+    image: ubuntu
+    hostname: node4
+    command: sleep infinity
+    ports:
+      - "8484:84"
+    networks:
+      - cs423-assignment4
+
+networks:
+  cs423-assignment4:
+    driver: bridge
